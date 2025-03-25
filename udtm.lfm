@@ -1,0 +1,50 @@
+object dtm_login: Tdtm_login
+  OldCreateOrder = False
+  Height = 352
+  HorizontalOffset = 293
+  VerticalOffset = 250
+  Width = 722
+  object conn: TUniConnection
+    LoginPrompt = False
+    ProviderName = 'MySQL'
+    Database = 'merhab_lamine'
+    SpecificOptions.Strings = (
+      'MySQL.UseUnicode=True'
+    )
+    Options.DisconnectedMode = True
+    Options.LocalFailover = True
+    Pooling = True
+    Username = 'merhab_root'
+    Server = '216.219.81.100'
+    OnConnectionLost = connConnectionLost
+    Left = 88
+    Top = 16
+    EncryptedPassword = 'B1FFB0FFAAFFADFFBAFFBBFF9BFF96FF91FF9AFFC7FFC9FFC7FFD4FF'
+  end
+  object qry_groups: TUniQuery
+    Connection = conn
+    FilterOptions = []
+    Left = 184
+    Top = 48
+  end
+  object qry_users: TUniQuery
+    Connection = conn
+    FilterOptions = []
+    Left = 112
+    Top = 112
+  end
+  object qry_permissions: TUniQuery
+    Connection = conn
+    FilterOptions = []
+    Left = 32
+    Top = 32
+  end
+  object SQLiteUniProvider1: TSQLiteUniProvider
+    Left = 32
+    Top = 192
+  end
+  object MySQLUniProvider1: TMySQLUniProvider
+    Left = 40
+    Top = 128
+  end
+end

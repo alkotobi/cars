@@ -1,0 +1,73 @@
+object frm_login: Tfrm_login
+  Left = 293
+  Height = 154
+  Top = 250
+  Width = 492
+  Caption = 'frm_login'
+  ClientHeight = 154
+  ClientWidth = 492
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -21
+  Font.Name = '.SF NS'
+  Position = poDesktopCenter
+  LCLVersion = '3.6.0.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 24
+    Top = 24
+    Width = 58
+    Caption = 'NAME'
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 24
+    Top = 64
+    Width = 50
+    Caption = 'PASS'
+  end
+  object edt_name: TEdit
+    Left = 96
+    Height = 35
+    Top = 16
+    Width = 387
+    TabOrder = 0
+    OnKeyPress = edt_passKeyPress
+  end
+  object edt_pass: TEdit
+    Left = 96
+    Height = 35
+    Top = 56
+    Width = 248
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 1
+    OnKeyPress = edt_passKeyPress
+  end
+  object Button1: TButton
+    Left = 224
+    Height = 25
+    Top = 112
+    Width = 125
+    Caption = 'CANCEL'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object btn_login: TButton
+    Left = 360
+    Height = 25
+    Top = 112
+    Width = 123
+    Caption = 'LOGIN'
+    TabOrder = 3
+    OnClick = btn_loginClick
+  end
+  object btn_signup: TButton
+    Left = 16
+    Height = 25
+    Top = 112
+    Width = 123
+    Caption = 'SIGNUP'
+    TabOrder = 4
+    Visible = False
+  end
+end
