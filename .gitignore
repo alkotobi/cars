@@ -79,3 +79,17 @@ __recovery/
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
+
+backup/
+
+lib/aarch64-darwin/
+
+*.res
+
+project1.app/Contents/
+
+cars.app/Contents/
+
+.DS_Store
+
+cars
